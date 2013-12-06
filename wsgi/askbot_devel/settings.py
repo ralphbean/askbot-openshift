@@ -197,6 +197,7 @@ INSTALLED_APPS = (
     #'avatar',#experimental use git clone git://github.com/ericflo/django-avatar.git$
 
     'compressor',
+    'group_messaging',
 )
 
 
