@@ -1,4 +1,5 @@
 ## Django settings for ASKBOT enabled project.
+import os
 import os.path
 import logging
 import sys
@@ -20,12 +21,16 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'django.db.backends.sqlite3'
-DATABASE_NAME =  os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'sqlite3.db')
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
-DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'sqlite3.db'),
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
+}
 
 #outgoing mail server settings
 SERVER_EMAIL = ''
