@@ -20,8 +20,8 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'postgresql_psycopg2' # only postgres (>8.3) and mysql are supported so far others have not been tested yet
-DATABASE_NAME = ''             # Or path to database file if using sqlite3.
+DATABASE_ENGINE = 'django.db.backends.sqlite3'
+DATABASE_NAME =  os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'sqlite3.db')
 DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
@@ -215,8 +215,7 @@ AUTHENTICATION_BACKENDS = (
 #logging settings
 LOG_FILENAME = 'askbot.log'
 logging.basicConfig(
-    filename=os.path.join(os.path.dirname(__file__), 'log', LOG_FILENAME),
-    level=logging.CRITICAL,
+    level=logging.INFO,
     format='%(pathname)s TIME: %(asctime)s MSG: %(filename)s:%(funcName)s:%(lineno)d %(message)s',
 )
 
