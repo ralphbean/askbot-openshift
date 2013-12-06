@@ -89,7 +89,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')#path to files collected by co
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'#must be this value
 
 # Make up some unique string, and don't share it with anybody.
-SECRET_KEY = 'sdljdfjkldsflsdjkhsjkldgjlsdgfs s '
+SECRET_KEY = 'this is ridiculous'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
