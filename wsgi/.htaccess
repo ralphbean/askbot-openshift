@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^m/(.+)$ static/$1 [L]
