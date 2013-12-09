@@ -255,7 +255,7 @@ ASKBOT_EXTRA_SKINS_DIR = os.path.join(PROJECT_ROOT, 'extra_skins') #path to your
 #take a look here http://askbot.org/en/question/207/
 STATICFILES_DIRS = (
     ('default/media', os.path.join(ASKBOT_ROOT, 'media')),
-    ASKBOT_EXTRAS_SKINS_DIR,
+    ASKBOT_EXTRA_SKINS_DIR,
 )
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
