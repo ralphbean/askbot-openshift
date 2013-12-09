@@ -251,11 +251,12 @@ CSRF_COOKIE_NAME = 'askbot_csrf'
 #enter domain name here - e.g. example.com
 #CSRF_COOKIE_DOMAIN = ''
 
-ASKBOT_EXTRA_SKINS_DIR = os.path.join(PROJECT_ROOT, 'extra_skins') #path to your private skin collection
+# Nevermind..
+#ASKBOT_EXTRA_SKINS_DIR = os.path.join(PROJECT_ROOT, 'extra_skins') #path to your private skin collection
 #take a look here http://askbot.org/en/question/207/
+
 STATICFILES_DIRS = (
     ('default/media', os.path.join(ASKBOT_ROOT, 'media')),
-    ASKBOT_EXTRA_SKINS_DIR,
 )
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
