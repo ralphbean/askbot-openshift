@@ -251,9 +251,6 @@ CSRF_COOKIE_NAME = 'askbot_csrf'
 #enter domain name here - e.g. example.com
 #CSRF_COOKIE_DOMAIN = ''
 
-USE_CUSTOM_CSS = True
-CUSTOM_CSS = STATIC_URL + "fedora/media/style/extra.css"
-
 ASKBOT_EXTRA_SKINS_DIR = os.path.join(PROJECT_ROOT, 'extra_skins') #path to your private skin collection
 #take a look here http://askbot.org/en/question/207/
 STATICFILES_DIRS = (
