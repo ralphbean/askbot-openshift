@@ -24,6 +24,3 @@ fi
 
 echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/askbot_devel/manage.py collectstatic --noinput'"
 python "$OPENSHIFT_REPO_DIR"wsgi/askbot_devel/manage.py collectstatic --noinput
-
-echo "Copying our custom css."
-cp "$OPENSHIFT_REPO_DIR"wsgi/askbot_devel/extra.css "$OPENSHIFT_REPO_DIR"wsgi/static/collected_static/default/media/style/extra.css
