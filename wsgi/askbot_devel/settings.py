@@ -154,8 +154,6 @@ DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
 
 #TEMPLATE_DIRS = (,) #template have no effect in askbot, use the variable below
-ASKBOT_EXTRA_SKINS_DIR = os.path.join(PROJECT_ROOT, 'extra_skins') #path to your private skin collection
-#take a look here http://askbot.org/en/question/207/
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
@@ -253,8 +251,11 @@ CSRF_COOKIE_NAME = 'askbot_csrf'
 #enter domain name here - e.g. example.com
 #CSRF_COOKIE_DOMAIN = ''
 
+ASKBOT_EXTRA_SKINS_DIR = os.path.join(PROJECT_ROOT, 'extra_skins') #path to your private skin collection
+#take a look here http://askbot.org/en/question/207/
 STATICFILES_DIRS = (
     ('default/media', os.path.join(ASKBOT_ROOT, 'media')),
+    ASKBOT_EXTRAS_SKINS_DIR,
 )
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
