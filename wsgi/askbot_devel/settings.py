@@ -254,9 +254,7 @@ CSRF_COOKIE_NAME = 'askbot_csrf'
 #CSRF_COOKIE_DOMAIN = ''
 
 STATICFILES_DIRS = (
-    #('default/media', os.path.join(ASKBOT_ROOT, 'media')),
-    #os.path.join(STATIC_ROOT, 'static'),
-    #STATIC_ROOT,
+    ('default/media', os.path.join(ASKBOT_ROOT, 'media')),
 )
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
