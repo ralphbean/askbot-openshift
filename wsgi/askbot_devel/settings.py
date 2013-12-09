@@ -78,10 +78,10 @@ LANGUAGE_CODE = 'en'
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'askbot', 'upfiles')
 MEDIA_URL = '/upfiles/'#url to uploaded media
-STATIC_URL = '/m/'#url to project static files
+STATIC_URL = '/static/'#url to project static files
 
 PROJECT_ROOT = os.path.dirname(__file__)
-STATIC_ROOT = os.path.join(PROJECT_ROOT, '..', 'static')#path to files collected by collectstatic
+STATIC_ROOT = os.path.join(PROJECT_ROOT, '..', 'static', 'collected_static')#path to files collected by collectstatic
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -254,7 +254,8 @@ CSRF_COOKIE_NAME = 'askbot_csrf'
 #CSRF_COOKIE_DOMAIN = ''
 
 STATICFILES_DIRS = (
-    ('default/media', os.path.join(ASKBOT_ROOT, 'media')),
+    #('default/media', os.path.join(ASKBOT_ROOT, 'media')),
+    os.path.join(PROJECT_ROOT, 'static'),
 )
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',

@@ -18,5 +18,9 @@ else
     python "$OPENSHIFT_REPO_DIR"wsgi/askbot_devel/manage.py migrate --noinput 2>&1
 fi
 
+if [ ! -d $OPENSHIFT_REPO_DIR/wsgi/static/collected_static ]; then
+    mkdir $OPENSHIFT_REPO_DIR/wsgi/static/collected_static
+fi
+
 echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/askbot_devel/manage.py collectstatic --noinput'"
 python "$OPENSHIFT_REPO_DIR"wsgi/askbot_devel/manage.py collectstatic --noinput
